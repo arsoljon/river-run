@@ -108,8 +108,23 @@ function draw() {
 
 
 function mousePressed(){
+  if(mouseX > leftx && mouseX < rightx && mouseY < ht + diff*3 && mouseY > ht - diff){
   smileChange = 20
+  }
+  else{
+    smileChange =0
+  }
 }
+
+function mouseDragged(){
+  if(mouseX > leftx && mouseX < rightx && mouseY < ht + diff*3 && mouseY > ht - diff){
+  smileChange = 20
+  }
+  else{
+    smileChange =0
+  }
+}
+
 
 function mouseReleased(){
   smileChange = 0
