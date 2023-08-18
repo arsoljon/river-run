@@ -1,9 +1,11 @@
-import {React, useEffect, useRef} from 'react';
+import {React, useEffect, useRef, useState} from 'react';
 import p5 from 'p5';
+
 
 export default function Riverp5(){
     const p5Ref = useRef(null);
     let myP5;
+
     const sketch = (p) => {
         let x
         let y
@@ -23,6 +25,7 @@ export default function Riverp5(){
         let songLength
         let maxLines
         let lines = []
+        let gif
 
 
         p.setup = () => {
@@ -82,7 +85,7 @@ export default function Riverp5(){
                     lineObj.changingSize = p.random(defaultSize, maxSize)
                     lineObj.speed = p.random(defaultSpeed, maxSpeed)
                     lineObj.y1 = tempy; 
-                    lineObj.y2 = tempy + changingSize; 
+                    lineObj.y2 = tempy + lineObj.changingSize; 
                 }
             }
             //head
@@ -111,8 +114,8 @@ export default function Riverp5(){
                 ht = p.height + diff 
             }
             p.curve(centerx - diff*0.4, ht + diff*2.8-smileChange, centerx - diff*0.4, ht + diff*2.8, centerx + diff * 0.8, ht + diff* 2.8, centerx + diff * 0.8, ht + diff*2.8-smileChange);
+            
         }
-
 
         p.mousePressed = () => {
         if(p.mouseX > leftx && p.mouseX < rightx && p.mouseY < ht + diff*3 && p.mouseY > ht - diff){
