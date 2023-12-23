@@ -1,3 +1,4 @@
 # river-run
 
-![Alt Text](https://github.com/arsoljon/river-run/blob/main/rivergif.gif)
+<img src="https://raw.githubusercontent.com/username/repo/main/path/to/your/image.gif" width="300" height="300">
+
