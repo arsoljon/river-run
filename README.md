@@ -1,4 +1,4 @@
 # river-run
 
-![river]("https://raw.githubusercontent.com/username/repo/main/path/to/your/image.gif" )
+![river](https://raw.githubusercontent.com/username/repo/main/path/to/your/image.gif)
 
